@@ -22,14 +22,17 @@
  * @category	Plugin
  * @author		Curtis Blackwell
  * @link		http://curtisblackwell.com
+ * @license		http://creativecommons.org/licenses/by-sa/3.0/
  */
 
+require_once(PATH_THIRD . 'garnish/config.php');
+
 $plugin_info = array(
-	'pi_name'		=> 'cpb Garnish',
-	'pi_version'	=> '0.1',
+	'pi_name'		=>  ADD_ON_NAME,
+	'pi_version'	=>  ADD_ON_V,
 	'pi_author'		=> 'Curtis Blackwell',
 	'pi_author_url'	=> 'http://curtisblackwell.com',
-	'pi_description'=> 'cpb Garnish is an ExpressionEngine 2 plugin that allows you to control the case of text between its variable pairs.',
+	'pi_description'=> 'Allows you to control the case of text between its variable pairs.',
 	'pi_usage'		=> Garnish::usage()
 );
 
@@ -41,43 +44,58 @@ class Garnish {
 	/**
 	 * Constructor
 	 */
-	public function __construct()
-	{
+	public function __construct() {
+
 		$this->EE =& get_instance();
+		
+		$this->str = $this->EE->TMPL->fetch_param('str');
+		
+		$tagdata = $this->EE->TMPL->tagdata;
 	}
 	
 	// ----------------------------------------------------------------
 	
+	
+	/**
+	 * All Caps
+	 */
+	function all_caps() {
+		strtoupper($tagdata);
+	}
+	
+	/**
+	 * Sentence Case
+	 */
+	function sentence_case() {
+		ucfirst($tagdata);
+	}
+	
+	/**
+	 * Title Case
+	 */
+	function title_case() {
+		ucwords($tagdata);
+	}
+	
+	/**
+	 * Lowercase
+	 */
+	 function lowercase() {
+	 	strtolower($tagdata);
+	 }
+	
+	
+	
 	/**
 	 * Plugin Usage
 	 */
-	public static function usage()
-	{
+	public static function usage() {
 		ob_start();
-?>
+	?>
 
-Installation
-------------
+	http://curtisblackwell.com/expressionengine-add-ons/cpb-garnish
 
-Upload the garnish folder to system/expressionengine/third_party
-
-
-Usage
------
-
-Simply wrap the tags around the integer or letter like so:
-
-	{exp:steak_sauce}A{/exp:steak_sauce} returns "1"
-	{exp:steak_sauce}1{/exp:steak_sauce} returns "A"
-
-If you want to convert integers to lowercase letters you can use the case parameter:
-
-	{exp:steak_sauce case="lowercase"}1{/exp:steak_sauce} returns "a"
-
-### Example Usage
-
-I'm using this to convert Matrix {row_count}s to letters on a personal project cataloguing my vinyl records (Side A, Side B, etc.).
-<?php
+	<?php
 		$buffer = ob_get_contents();
 		ob_end_clean();
 		return $buffer;
