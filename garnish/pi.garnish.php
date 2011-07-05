@@ -11,7 +11,7 @@
  * @since		Version 2.0
  * @filesource
  */
- 
+
 // ------------------------------------------------------------------------
 
 /**
@@ -40,55 +40,49 @@ $plugin_info = array(
 class Garnish {
 
 	public $return_data;
-    
+	public $tagdata;
+
 	/**
 	 * Constructor
 	 */
 	public function __construct() {
-
 		$this->EE =& get_instance();
-		
-		$tagdata = $this->EE->TMPL->tagdata;
+		$this->tagdata = $this->EE->TMPL->tagdata;
+	}
 
-	}
-	
 	// ----------------------------------------------------------------
-	
-	
+
 	/**
-	 * All Caps
+	 * Uppercase
 	 */
-	function all_caps() {
-		$tagdata = $this->EE->TMPL->tagdata;
-		return strtoupper($tagdata);
+	function uppercase() {
+		return strtoupper($this->tagdata);
 	}
-	
+
 	/**
 	 * Sentence Case
 	 */
 	function sentence_case() {
-		$tagdata = $this->EE->TMPL->tagdata;
-		return ucfirst($tagdata);
+		return ucfirst($this->tagdata);
 	}
-	
+
 	/**
 	 * Title Case
 	 */
 	function title_case() {
-		$tagdata = $this->EE->TMPL->tagdata;
-		return ucwords($tagdata);
+		return ucwords($this->tagdata);
 	}
-	
+
 	/**
 	 * Lowercase
 	 */
-	 function lowercase() {
-		$tagdata = $this->EE->TMPL->tagdata;
-	 	return strtolower($tagdata);
-	 }
-	
-	
-	
+	function lowercase() {
+		return strtolower($this->tagdata);
+	}
+
+	// ----------------------------------------------------------------
+
+
 	/**
 	 * Plugin Usage
 	 */
