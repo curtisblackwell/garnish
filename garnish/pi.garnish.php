@@ -53,10 +53,10 @@ class Garnish {
 	// ----------------------------------------------------------------
 
 	/**
-	 * Uppercase
+	 * Title Case
 	 */
-	function uppercase() {
-		return strtoupper($this->tagdata);
+	function title_case() {
+		return ucwords($this->tagdata);
 	}
 
 	/**
@@ -67,10 +67,10 @@ class Garnish {
 	}
 
 	/**
-	 * Title Case
+	 * Uppercase
 	 */
-	function title_case() {
-		return ucwords($this->tagdata);
+	function uppercase() {
+		return strtoupper($this->tagdata);
 	}
 
 	/**
