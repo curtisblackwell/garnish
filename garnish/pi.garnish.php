@@ -48,9 +48,8 @@ class Garnish {
 
 		$this->EE =& get_instance();
 		
-		$this->str = $this->EE->TMPL->fetch_param('str');
-		
 		$tagdata = $this->EE->TMPL->tagdata;
+
 	}
 	
 	// ----------------------------------------------------------------
@@ -60,28 +59,32 @@ class Garnish {
 	 * All Caps
 	 */
 	function all_caps() {
-		strtoupper($tagdata);
+		$this->EE->TMPL->tagdata;
+		return strtoupper($tagdata);
 	}
 	
 	/**
 	 * Sentence Case
 	 */
 	function sentence_case() {
-		ucfirst($tagdata);
+		$tagdata = $this->EE->TMPL->tagdata;
+		return ucfirst($tagdata);
 	}
 	
 	/**
 	 * Title Case
 	 */
 	function title_case() {
-		ucwords($tagdata);
+		$tagdata = $this->EE->TMPL->tagdata;
+		return ucwords($tagdata);
 	}
 	
 	/**
 	 * Lowercase
 	 */
 	 function lowercase() {
-	 	strtolower($tagdata);
+		$this->EE->TMPL->tagdata;
+	 	return strtolower($tagdata);
 	 }
 	
 	
