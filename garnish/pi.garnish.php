@@ -59,7 +59,7 @@ class Garnish {
 	 * All Caps
 	 */
 	function all_caps() {
-		$this->EE->TMPL->tagdata;
+		$tagdata = $this->EE->TMPL->tagdata;
 		return strtoupper($tagdata);
 	}
 	
@@ -83,7 +83,7 @@ class Garnish {
 	 * Lowercase
 	 */
 	 function lowercase() {
-		$this->EE->TMPL->tagdata;
+		$tagdata = $this->EE->TMPL->tagdata;
 	 	return strtolower($tagdata);
 	 }
 	
