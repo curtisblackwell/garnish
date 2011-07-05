@@ -4,7 +4,7 @@ cpb Garnish
 Overview
 --------
 
-cpb Garnish is an ExpressionEngine 2 plugin that allows you to control the case of text between its variable pairs.
+cpb Garnish is an ExpressionEngine 2 plugin that allows you to control the case of text between its tag pairs.
 
 Features
 --------
@@ -42,11 +42,11 @@ It will only capitalize the first character.
 
 ### Sentence Case
 
-	{exp:garnish:sentence_case}it was cold and it rained so I felt like an actor.{/exp:garnish:sentence_case}
+	{exp:garnish:sentence_case}it was cold, and it rained, so I felt like an actor.{/exp:garnish:sentence_case}
 	
 will return
 
-	It was cold and it rained so I felt like an actor.
+	It was cold, and it rained, so I felt like an actor.
 
 ### Uppercase
 
