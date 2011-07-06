@@ -47,7 +47,9 @@ class Garnish {
 	 */
 	public function __construct() {
 		$this->EE =& get_instance();
-		$this->tagdata = $this->EE->TMPL->tagdata;
+		
+		// Make everything lowercase first to fix dUmBaSs TyPiNg.
+		$this->tagdata = strtolower($this->EE->TMPL->tagdata);
 	}
 
 	// ----------------------------------------------------------------
@@ -60,24 +62,45 @@ class Garnish {
 	}
 
 	/**
-	 * Sentence Case
+	 * Sentence case
 	 */
 	function sentence_case() {
 		return ucfirst($this->tagdata);
 	}
 
 	/**
-	 * Uppercase
+	 * UPPERCASE
 	 */
 	function uppercase() {
 		return strtoupper($this->tagdata);
 	}
 
 	/**
-	 * Lowercase
+	 * lowercase
 	 */
 	function lowercase() {
-		return strtolower($this->tagdata);
+		// The constructor already made it lowercase, so all we need to do is spit it out.
+		return $this->tagdata;
+	}
+	
+	/**
+	 * Name Case | Name-Case | Name O'Case
+	 *
+	 * Thanks to jmarois@ca.ibm.com (http://www.php.net/manual/en/function.ucwords.php#96179)
+	 */
+	function name_case() {
+		// Capitalize all the words delimited by a space.
+		$string = ucwords($this->tagdata);
+		
+		foreach (array('-', '\'') as $delimiter) {
+			// If the string contains either a hyphen or apostrophe...
+			if (strpos($string, $delimiter) !== false) {
+				// ...capitalize the word after the hyphen and/or apostrophe.
+				$string = implode($delimiter, array_map('ucfirst', explode($delimiter, $string)));
+			}
+		}
+		
+		return $string;
 	}
 
 	// ----------------------------------------------------------------
