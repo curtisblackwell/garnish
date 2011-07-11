@@ -1,7 +1,7 @@
 <?php
 if (! defined('GARNISH_V')) {
 	define('GARNISH_NAME', 'cpb Garnish');
-	define('GARNISH_V', '0.1');
+	define('GARNISH_V', '0.1.1');
 }
 
 $config['name']									= GARNISH_NAME;
