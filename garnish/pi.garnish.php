@@ -28,8 +28,8 @@
 require_once(PATH_THIRD . 'garnish/config.php');
 
 $plugin_info = array(
-	'pi_name'		=>  ADD_ON_NAME,
-	'pi_version'	=>  ADD_ON_V,
+	'pi_name'		=>  GARNISH_NAME,
+	'pi_version'	=>  GARNISH_V,
 	'pi_author'		=> 'Curtis Blackwell',
 	'pi_author_url'	=> 'http://curtisblackwell.com',
 	'pi_description'=> 'Allows you to control the case of text between its variable pairs.',
