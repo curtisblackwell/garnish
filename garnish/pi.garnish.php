@@ -15,14 +15,22 @@
 // ------------------------------------------------------------------------
 
 /**
- * cpb Garnish Plugin
+ * cpb Garnish
+ *
+ * An ExpressionEngine 2 plugin.
+ *
+ * NOTICE OF LICENSE
+ *
+ * Licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License
  *
  * @package		ExpressionEngine
  * @subpackage	Addons
  * @category	Plugin
  * @author		Curtis Blackwell
- * @link		http://curtisblackwell.com
+ * @copyright   Copyright (c) 2011, Curtis Blackwell (http://curtisblackwell.com)
+ * @link        http://curtisblackwell.com/expressionengine-add-ons/cpb-garnish
  * @license		http://creativecommons.org/licenses/by-sa/3.0/
+ * @since       Version 0.1
  */
 
 require_once(PATH_THIRD . 'garnish/config.php');
