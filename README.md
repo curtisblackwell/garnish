@@ -17,7 +17,7 @@ Features
 Installation
 ------------
 
-Upload the garnish folder to system/expressionengine/third_party
+Upload the `garnish` folder to `system/expressionengine/third_party`
 
 Usage
 -----
