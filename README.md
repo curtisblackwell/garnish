@@ -32,14 +32,6 @@ will return
 
 	Five Years
 
-#### Note
-
-Title case will **not** fix things like
-
-	lUlZ, i TyPe LiKe A dUmBaSs
-
-It will only capitalize the first character.
-
 ### Sentence Case
 
 	{exp:garnish:sentence_case}it was cold, and it rained, so I felt like an actor.{/exp:garnish:sentence_case}
