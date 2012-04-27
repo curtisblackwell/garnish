@@ -17,7 +17,7 @@ Features
 Installation
 ------------
 
-Upload the garnish folder to system/expressionengine/third_party
+Upload the `garnish` folder to `system/expressionengine/third_party`
 
 Usage
 -----
@@ -31,14 +31,6 @@ Just wrap the text in the appropriate tag:
 will return
 
 	Five Years
-
-#### Note
-
-Title case will **not** fix things like
-
-	lUlZ, i TyPe LiKe A dUmBaSs
-
-It will only capitalize the first character.
 
 ### Sentence Case
 
