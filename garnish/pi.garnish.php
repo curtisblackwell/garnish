@@ -121,7 +121,7 @@ class Garnish {
 		ob_start();
 	?>
 
-	http://curtisblackwell.com/expressionengine-add-ons/cpb-garnish
+	http://curtisblackwell.github.com/cpb_garnish
 
 	<?php
 		$buffer = ob_get_contents();
