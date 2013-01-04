@@ -1,10 +1,10 @@
-cpb Garnish
-===========
+Garnish
+=======
 
 Overview
 --------
 
-cpb Garnish is an ExpressionEngine 2 plugin that allows you to control the case of text between its tag pairs.
+Garnish is an ExpressionEngine 2 plugin that allows you to control the case of text between its tag pairs.
 
 Features
 --------
@@ -46,7 +46,7 @@ will return
 ### Sentence Case
 
     {exp:garnish:sentence_case}it was cold, and it rained, so I felt like an actor.{/exp:garnish:sentence_case}
-	
+
 will return
 
     It was cold, and it rained, so I felt like an actor.
