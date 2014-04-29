@@ -92,6 +92,13 @@ class Garnish {
 	}
 	
 	/**
+	 * remove hyphens - first letters in upper case
+	 */
+	function heading_case() {
+		return ucwords(str_replace("-", " ", $this->tagdata));
+	}	
+	
+	/**
 	 * Name Case | Name-Case | Name O'Case
 	 *
 	 * Thanks to jmarois@ca.ibm.com (http://www.php.net/manual/en/function.ucwords.php#96179)
